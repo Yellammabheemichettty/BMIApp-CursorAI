@@ -118,6 +118,44 @@ button:hover {
     white-space: pre-line;
 }
 
+/* BMI Info Section */
+.bmi-info {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.bmi-info h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.bmi-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+}
+
+.category .range {
+    font-weight: bold;
+}
+
+.category .value {
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
 /* BMI Category Colors */
 .underweight {
     background-color: #ffeb3b;
