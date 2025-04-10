@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        <div class="main-content">
+            <div class="calculator-panel">
+                <div class="calculator">
+                    <div class="input-group">
+                        <label for="unit">Select Unit System:</label>
+                        <select id="unit" onchange="toggleUnits()">
+                            <option value="metric">Metric (kg, cm)</option>
+                            <option value="imperial">Imperial (lbs, inches)</option>
+                        </select>
+                    </div>
+
+                    <div id="metric-inputs">
+                        <div class="input-group">
+                            <label for="weight">Weight (kg):</label>
+                            <input type="number" id="weight" placeholder="Enter weight in kg">
+                        </div>
+                        <div class="input-group">
+                            <label for="height">Height (cm):</label>
+                            <input type="number" id="height" placeholder="Enter height in cm">
+                        </div>
+                    </div>
+
+                    <div id="imperial-inputs" style="display: none;">
+                        <div class="input-group">
+                            <label for="weight-lbs">Weight (lbs):</label>
+                            <input type="number" id="weight-lbs" placeholder="Enter weight in lbs">
+                        </div>
+                        <div class="input-group">
+                            <label for="height-ft">Height (ft):</label>
+                            <input type="number" id="height-ft" placeholder="Enter feet">
+                        </div>
+                        <div class="input-group">
+                            <label for="height-in">Height (in):</label>
+                            <input type="number" id="height-in" placeholder="Enter inches">
+                        </div>
+                    </div>
+
+                    <button onclick="calculateBMI()">Calculate BMI</button>
+
+                    <div id="result" class="result">
+                        <h2>Your BMI: <span id="bmi-value">-</span></h2>
+                        <p id="bmi-category">-</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="suggestions-panel">
+                <div id="food-suggestions" class="food-suggestions">
+                    <h3>Dietary Suggestions</h3>
+                    <p id="suggestions-text">Enter your measurements to get personalized dietary suggestions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
